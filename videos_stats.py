@@ -114,11 +114,17 @@ def extract_video_data(video_ids)->list:
         raise excptn
 
 
+def save_to_json(data):
+    file_path = f"./data/YT_data{date.today()}.json"
+    with open(file_path, "w", encoding="utf-8") as json_file:
+        json.dump(data, json_file, ensure_ascii=False, indent=4)
+
 
 if __name__ == "__main__":
     playListId = get_playlist_id()
     video_ids = get_video_ids(playListId)
-    print(extract_video_data(video_ids))
+    video_data = extract_video_data(video_ids)
+    save_to_json(video_data)
 
 
     
