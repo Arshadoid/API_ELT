@@ -1,4 +1,4 @@
 api_elt_venv/
-data/
+data/*
 __pycache/
 .env
