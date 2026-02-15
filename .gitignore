@@ -1,4 +1,5 @@
 api_elt_venv/
 data/*
+!data/.gitkeep
 __pycache/
 .env
